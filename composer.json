@@ -2,6 +2,14 @@
     "name": "snoeren-development/laravel-domain-scope",
     "description": "Scope your platform's data by domain.",
     "type": "laravel-package",
+    "keywords": [
+        "laravel",
+        "domain",
+        "scope",
+        "snoeren",
+        "development"
+    ],
+    "homepage": "https://github.com/snoeren-development/laravel-domain-scope",
     "license": "MIT",
     "autoload": {
         "psr-4": {
@@ -16,7 +24,8 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "php": "^7.4|^8.0"
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
     },
     "extra": {
         "laravel": {
@@ -24,5 +33,8 @@
                 "SnoerenDevelopment\\DomainScope\\ServiceProvider"
             ]
         }
+    },
+    "config": {
+        "sort-packages": true
     }
 }
