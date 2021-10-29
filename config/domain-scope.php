@@ -95,4 +95,30 @@ return [
         // 'App\Models\User'
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Caching
+    |--------------------------------------------------------------------------
+    |
+    | The cache settings define how to cache domain-lookups. Lookups are done
+    | on every request, which is unnecessary as domains are pretty static data.
+    |
+    | ttl
+    | -----
+    | The time-to-live for cached domains in seconds. 0 disables the cache.
+    |
+    | key
+    | -----
+    | {domain} will be replaced by the lowercase variant of the domain, based
+    | on mode. It will insert the subdomain in sub mode and the full domain
+    | in full mode. You, as developer, can re-use this key to populate or clear
+    | the cache in your part of the application.
+    |
+    */
+
+    'cache' => [
+        'ttl' => (int) env('DOMAINSCOPE_CACHE_TTL', 60),
+        'key' => env('DOMAINSCOPE_CACHE_KEY', 'domain-scope.{domain}'),
+    ],
+
 ];

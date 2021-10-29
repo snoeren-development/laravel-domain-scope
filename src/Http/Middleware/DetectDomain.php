@@ -18,7 +18,7 @@ class DetectDomain
      */
     public function handle(Request $request, Closure $next) // phpcs:ignore
     {
-        $domain = $request->getHost();
+        $domain = strtolower($request->getHost());
 
         /** @var \SnoerenDevelopment\DomainScope\Resolvers\Resolver $resolver */
         $resolver = app('domain-scope.resolver');
