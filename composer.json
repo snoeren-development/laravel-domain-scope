@@ -1,0 +1,26 @@
+{
+    "name": "snoeren-development/laravel-domain-scope",
+    "description": "Scope your platform's data by domain.",
+    "type": "laravel-package",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "SnoerenDevelopment\\DomainScope\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Michael Snoeren",
+            "email": "info@snoerendevelopment.nl"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SnoerenDevelopment\\DomainScope\\ServiceProvider"
+            ]
+        }
+    }
+}
