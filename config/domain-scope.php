@@ -2,6 +2,7 @@
 declare(strict_types = 1);
 
 use App\Models\Domain;
+use Illuminate\Database\Eloquent\Model;
 
 return [
 
@@ -81,6 +82,20 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Default domain resolver.
+    |--------------------------------------------------------------------------
+    |
+    | If no (sub)domain could be matched, it's useful to fallback to a default
+    | domain. Configure your own resolver here.
+    |
+    */
+
+    'default' => function (string $domain): ?Model {
+        return null;
+    },
+
+    /*
+    |--------------------------------------------------------------------------
     | Scoped models.
     |--------------------------------------------------------------------------
     |
@@ -111,8 +126,8 @@ return [
     | -----
     | {domain} will be replaced by the lowercase variant of the domain, based
     | on mode. It will insert the subdomain in sub mode and the full domain
-    | in full mode. You, as developer, can re-use this key to populate or clear
-    | the cache in your part of the application.
+    | in full mode. You can re-use this key to populate or clear the cache in
+    | your part of the application.
     |
     */
 

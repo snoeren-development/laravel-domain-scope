@@ -24,6 +24,11 @@ class DetectDomain
         $resolver = app('domain-scope.resolver');
         $model = $resolver->resolve($domain);
 
+        // If no domain has been matched, try the default fallback resolver.
+        if (!$model && is_callable($fallback = config('domain-scope.default'))) {
+            $model = $fallback($domain);
+        }
+
         // If a domain has been matched, configure the application.
         if ($model) {
             // Bind the current domain into the service container.
