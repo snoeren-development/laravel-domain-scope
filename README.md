@@ -1,7 +1,7 @@
 # Laravel Domain Scope
 [![Latest version on Packagist](https://img.shields.io/packagist/v/snoeren-development/laravel-domain-scope.svg?style=flat-square)](https://packagist.org/packages/snoeren-development/laravel-domain-scope)
 [![Software License](https://img.shields.io/github/license/snoeren-development/laravel-domain-scope?style=flat-square)](LICENSE)
-[![Build status](https://img.shields.io/github/workflow/status/snoeren-development/laravel-domain-scope/PHP%20Tests?style=flat-square)](https://github.com/snoeren-development/laravel-domain-scope/actions)
+[![Build status](https://img.shields.io/github/actions/workflow/status/snoeren-development/laravel-domain-scope/php.yml?style=flat-square)](https://github.com/snoeren-development/laravel-domain-scope/actions)
 [![Downloads](https://img.shields.io/packagist/dt/snoeren-development/laravel-domain-scope?style=flat-square)](https://packagist.org/packages/snoeren-development/laravel-domain-scope)
 
 This package adds domain-scoped content to your application. Content will be
@@ -29,7 +29,7 @@ $table->foreignId('domain_id')->constrained()->cascadeOnDelete();
 ```
 
 ### Requirements
-This package requires at least PHP 7.4 and Laravel 8.
+This package requires at least PHP 8.0 and Laravel 8.
 
 ## Usage
 After installation, it's up to you how to handle domains. For example:
